@@ -1,91 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
+
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #2a2a2a;
 }
 
-h1 {
-  margin-top: 0;
-  font-size: 22px;
+.mode {
+	color: #fff;
+	display: flex;
+	height: 100vh;
+	justify-content: space-around;
+	/* align-items: center; */
+	/* flex-direction: column; */
+	flex-wrap: wrap;
 }
 
-h2 {
-  margin-top: 0;
-  font-size: 20px;
+.mode p {
+	/* justify-self: flex-start; */
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	padding: 10% 0 0 0;
+	font-size: 4rem;
+	text-align: center;
+	height: 40%;
+	margin: 0 0 0 0;
+	width: 100%;
 }
 
-h3 {
-  margin-top: 0;
-  font-size: 18px;
+.mode button {
+	/* justify-self: center; */
+	background-color: #0197f6;
+	border: none;
+	outline: none;
+	color: #fff;
+	cursor: pointer;
+	height: 20%;
+	width: 25%;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	margin-bottom: 10%;
+	font-size: 2em;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: box-shadow 0.15s;
 }
 
-h4 {
-  margin-top: 0;
-  font-size: 16px;
+.mode button:hover {
+	box-shadow: 1px 1px 10px rgb(20, 20, 20), -1px -1px 10px rgb(20, 20, 20);
 }
 
-h5 {
-  margin-top: 0;
-  font-size: 14px;
+.mode .cpu {
+	margin-left: 5%;
 }
 
-h6 {
-  margin-top: 0;
-  font-size: 12px;
+.mode .two-player {
+	margin-right: 5%;
 }
 
-code {
-  font-size: 1.2em;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
-}
-
-.board-row:after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-.status {
-  margin-bottom: 10px;
+.mode img {
+	width: 30%;
+	height: 72%;
+	margin: 0 15% 0 0;
 }
 
 .game {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	height: 100vh;
+	justify-content: space-around;
+}
+
+.game-play {
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.status {
+	font-family: "Montserrat", sans-serif;
+	font-size: 44px;
+	text-align: center;
+	width: 100%;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+}
+
+.status span {
+	width: 6%;
+	transition: all 0.5s;
+}
+
+.game-board {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 10%;
+}
+
+.board {
+	display: grid;
+}
+
+.square {
+	background: rgba(180, 180, 180, 0.8);
+	border: 2px solid #736f72;
+	width: 125px;
+	height: 125px;
+	float: left;
+	font-weight: bold;
+	line-height: 34px;
+	margin-right: -2px;
+	margin-top: -2px;
+	padding: 0;
+	text-align: center;
+	font-size: 4em;
+	/* transition: 0.25s; */
+}
+
+.hidden {
+	color: transparent;
+}
+
+.square:hover {
+	color: rgba(0, 0, 0, 0.2);
+}
+
+#show {
+	color: black;
 }
 
 .game-info {
-  margin-left: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	color: #fff;
+}
+
+.game-moves {
+	margin-top: 1.5rem;
+	width: 100%;
+}
+
+ol {
+	padding: 0;
+}
+
+li {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	list-style: none;
+}
+
+li button {
+	background: none;
+	border: none;
+	color: #fff;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.game-buttons {
+	align-self: flex-end;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.restart-btn {
+	background-color: #0197f6;
+	border: none;
+	outline: none;
+	color: #fff;
+	cursor: pointer;
+	width: 90%;
+	height: 50px;
+	/* align-self: flex-end; */
+	font-family: "Montserrat", sans-serif;
+	margin-bottom: 10%;
+	font-size: 1.5em;
+	border-radius: 30px;
+}
+.reset-btn {
+	background-color: #0197f6;
+	border: none;
+	outline: none;
+	color: #fff;
+	cursor: pointer;
+	width: 90%;
+	height: 50px;
+	/* align-self: flex-end; */
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.5em;
+	margin-bottom: 20%;
+	border-radius: 30px;
 }
